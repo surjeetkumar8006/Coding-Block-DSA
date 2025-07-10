@@ -1,10 +1,9 @@
 public class Boston_Numbers {
-     public static void main(String args[]) {
+    public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         System.out.println(isBoston(n));
     }
-
     // Function to return 1 if Boston number, else 0
     public static int isBoston(int n) {
         int originalSum = digitSum(n);

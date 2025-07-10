@@ -1,3 +1,4 @@
+import java.util.*;
 public class Odd_and_Even_back_in_Delhi {
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);

@@ -1,3 +1,4 @@
+import java.util.*;
 public class Nth_Fibonacci {
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
