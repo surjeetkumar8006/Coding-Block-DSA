@@ -23,6 +23,6 @@ public class LCM {
 
     // Function to calculate LCM
     public static int lcm(int a, int b) {
-        return (a / gcd(a, b)) * b;  // to prevent integer overflow
+        return (a / gcd(a, b)) * b; 
     }
 }

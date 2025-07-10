@@ -1,6 +1,5 @@
 import java.util.*;
-
-public class Binary_To_Decimal {
+public class Decimal_to_bianry {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -13,10 +12,10 @@ public class Binary_To_Decimal {
         int dec = 0;
         int pow = 0;
         while (n > 0) {
-            int rem = n % 10;
-            dec += rem * Math.pow(2, pow);
+            int rem = n % 2;
+            dec += rem * Math.pow(10, pow);
             pow++;
-            n /= 10;
+            n /= 2;
         }
         return dec;
 

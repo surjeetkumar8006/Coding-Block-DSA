@@ -1,3 +1,4 @@
+import java.util.*;
 public class Boston_Numbers {
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
@@ -10,11 +11,12 @@ public class Boston_Numbers {
         int factorDigitSum = 0;
         int num = n;
 
-        for (int i = 2; i * i <= num; i++) {
+        for (int i = 2;  i <= num; i++) {
             while (n % i == 0) {
                 factorDigitSum += digitSum(i);
                 n /= i;
             }
+            if (n == 1) break; 
         }
 
         // If there's a prime factor greater than sqrt(num)
