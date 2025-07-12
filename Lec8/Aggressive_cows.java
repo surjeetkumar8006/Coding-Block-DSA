@@ -5,7 +5,6 @@ public class Aggressive_cows {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
-
         while (t > 0) {
             int nos = sc.nextInt();
             int noc = sc.nextInt();
@@ -18,7 +17,6 @@ public class Aggressive_cows {
             t--;
         }
     }
-
     public static int largest_minimum(int[] stall, int noc) {
         int n = stall.length;
         int left = 1;
@@ -35,9 +33,7 @@ public class Aggressive_cows {
         }
         return ans;
     }
-
     public static boolean isItPossible(int[] stall, int noc, int mid) {
-
         int pos = stall[0];
         int cow = 1;
         for (int i = 1; i < stall.length; i++) {
@@ -49,7 +45,6 @@ public class Aggressive_cows {
                 return true;
             }
         }
-
         return false;
     }
 }
