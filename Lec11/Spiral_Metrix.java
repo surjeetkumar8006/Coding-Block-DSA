@@ -23,22 +23,22 @@ public class Spiral_Metrix {
         int total = arr.length * arr[0].length;
         int c = 0;
         while (c < total) {
-            for (int i = minc; i <= maxc; i++) {
+            for (int i = minc; i <= maxc && c < total; i++) {
                 System.out.print(arr[minr][i] + " ");
                 c++;
             }
             minr++;
-            for (int i = minr; i <= maxr; i++) {
+            for (int i = minr; i <= maxr & c < total; i++) {
                 System.out.print(arr[i][maxc] + " ");
                 c++;
             }
             maxc--;
-            for (int i = maxc; i >= minc; i--) {
+            for (int i = maxc; i >= minc && c < total; i--) {
                 System.out.print(arr[maxr][i] + " ");
                 c++;
             }
             maxr--;
-            for (int i = maxr; i >= minr; i--) {
+            for (int i = maxr; i >= minr && c < total; i--) {
                 System.out.print(arr[minc][i] + " ");
                 c++;
             }
