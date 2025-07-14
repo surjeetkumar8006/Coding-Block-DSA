@@ -1,4 +1,6 @@
-class Solution {
+import java.util.*;
+
+public class DiagonalTraverse {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
@@ -10,7 +12,10 @@ class Solution {
                 arr[i][j] = sc.nextInt();
             }
         }
-        DiagonalTraverse(arr);
+        int[] result = DiagonalTraverse(arr);
+        for (int val : result) {
+            System.out.print(val + " ");
+        }
     }
 
     public static int[] DiagonalTraverse(int[][] mat) {
