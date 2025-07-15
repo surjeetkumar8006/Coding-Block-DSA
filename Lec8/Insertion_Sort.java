@@ -27,7 +27,7 @@ public class Insertion_Sort {
     public static void Insertion_Last_element(int[] arr, int i) {
         int item = arr[i];
         int j = i - 1;
-        while (i >= 0 && arr[j] > item) {
+        while (j >= 0 && arr[j] > item) {
             arr[j + 1] = arr[j];
             arr[j] = item;
             j--;

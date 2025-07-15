@@ -1,24 +1,39 @@
-public class Majority_Element {
+package DSA_QUESTION_CODING_BLOCK;
+
+public class Majority_element {
+
     public static void main(String[] args) {
-        int[] arr = { 2, 2, 1, 1, 1, 2, 2 };
-        System.out.println(moore_voting(arr));
+        // Example input array
+        int[] nums1 = { 3, 2, 3 };
+        int[] nums2 = { 2, 2, 1, 1, 1, 2, 2 };
+
+        // Test case 1
+        int result1 = majorityElement(nums1);
+        System.out.println("Majority element in nums1: " + result1);
+
+        // Test case 2
+        int result2 = majorityElement(nums2);
+        System.out.println("Majority element in nums2: " + result2);
     }
 
-    public static int moore_voting(int[] arr) {
-        int e = arr[0];
-        int vote = 1;
-        for (int i = 1; i < arr.length; i++) {
-            if (arr[i] == e) {
-                vote++;
-            } else {
-                vote--;
-                if (vote == 0) {
-                    e = arr[i];
-                    vote = 1;
+    // ✅ Moore's Voting Algorithm
+    public static int majorityElement(int[] nums) {
+        int n = nums.length;
+
+        for (int val : nums) {
+            int count = 0;
+
+            for (int el : nums) {
+                if (val == el) {
+                    count++;
                 }
             }
+
+            if (count > n / 2) {
+                return val;
+            }
+
         }
-        return e;
+        return -1;
     }
-    
 }
