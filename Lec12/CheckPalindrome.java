@@ -1,19 +1,16 @@
 public class CheckPalindrome {
     public static void main(String[] args) {
-        String str = "nitin";
+        String str = "niti";
         System.out.println(IsPalindrom(str));
     }
 
     public static boolean IsPalindrom(String s1) {
-        int i = 0;
-        int j = s1.length() - 1;
-        while (i < j) {
-            if (s1.charAt(i) != s1.charAt(j)) {
-                return false;
-            }
-            i++;
-            j--;
+      for(int  i=0;i<s1.length()/2;i++){
+        int  n=s1.length()-1-i;
+        if(s1.charAt(i)!=s1.charAt(n)) {
+            return false;
         }
+      }
         return true;
     }
 }
