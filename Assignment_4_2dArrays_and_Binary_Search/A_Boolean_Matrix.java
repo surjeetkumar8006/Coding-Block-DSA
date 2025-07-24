@@ -1,4 +1,3 @@
-
 import java.util.*;
 
 public class A_Boolean_Matrix {
@@ -28,7 +27,6 @@ public class A_Boolean_Matrix {
                 }
             }
         }
-
         // Second pass to update the matrix
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
@@ -37,12 +35,12 @@ public class A_Boolean_Matrix {
                 }
             }
         }
-
         // Output the modified matrix
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
                 System.out.print(mat[i][j]);
-                if (j != n - 1) System.out.print(" ");
+                if (j != n - 1)
+                    System.out.print(" ");
             }
             System.out.println();
         }
@@ -50,4 +48,3 @@ public class A_Boolean_Matrix {
         sc.close();
     }
 }
-
