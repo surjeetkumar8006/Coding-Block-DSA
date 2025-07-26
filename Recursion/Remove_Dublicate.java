@@ -10,11 +10,11 @@ public class Remove_Dublicate {
             return;
         }
         char ch = str.charAt(inx);
-        System.out.print(ch-'a'+" ");
+        System.out.print(ch - 'a' + " ");
         if (map[ch - 'a'] == true) {
             Remove_Dublicates(str, inx + 1, newStr, map);
         } else {
-            map[ch -'a'] = true;
+            map[ch - 'a'] = true;
             Remove_Dublicates(str, inx + 1, newStr.append(ch), map);
         }
     }
